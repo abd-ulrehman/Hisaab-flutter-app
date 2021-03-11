@@ -118,7 +118,7 @@ class LoginPage extends StatelessWidget {
                 );
               },
               child: Text(
-                "Sign Up",
+                "Sign Me Up",
               ),
             ),
           ),
