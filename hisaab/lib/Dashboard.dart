@@ -113,7 +113,7 @@ class _DashboardState extends State<Dashboard> {
                         Card(
                           child: ListTile(
                             onTap: () {
-                              _showExpenceDetails();
+                              // _showExpenceDetails();
                             },
                             title: Text("Grocery Items"),
                             subtitle: Text("Household"),
@@ -686,25 +686,25 @@ class _DashboardState extends State<Dashboard> {
     //     });
   }
 
-  static void _showExpenceDetails() {
-    showModalBottomSheet(
-        context: context,
-        builder: (BuildContext bc) {
-          return Container(
-            child: new Wrap(
-              children: <Widget>[
-                new ListTile(
-                    leading: new Icon(Icons.music_note),
-                    title: new Text('Music'),
-                    onTap: () => {}),
-                new ListTile(
-                  leading: new Icon(Icons.videocam),
-                  title: new Text('Video'),
-                  onTap: () => {},
-                ),
-              ],
-            ),
-          );
-        });
-  }
+  // static void _showExpenceDetails() {
+  //   showModalBottomSheet(
+  //       context: context,
+  //       builder: (BuildContext bc) {
+  //         return Container(
+  //           child: new Wrap(
+  //             children: <Widget>[
+  //               new ListTile(
+  //                   leading: new Icon(Icons.music_note),
+  //                   title: new Text('Music'),
+  //                   onTap: () => {}),
+  //               new ListTile(
+  //                 leading: new Icon(Icons.videocam),
+  //                 title: new Text('Video'),
+  //                 onTap: () => {},
+  //               ),
+  //             ],
+  //           ),
+  //         );
+  //       });
+  // }
 }
