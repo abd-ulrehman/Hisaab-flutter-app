@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hisaab/Dashboard.dart';
 import 'package:hisaab/SignupPage.dart';
 
 class LoginPage extends StatelessWidget {
@@ -11,7 +12,7 @@ class LoginPage extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text("Are you sure?"),
-          content: Text("You are going to exit the application"),
+          content: Text("You are going to close the application."),
           actions: <Widget>[
             FlatButton(
               onPressed: () {
@@ -98,7 +99,12 @@ class LoginPage extends StatelessWidget {
               textColor: Colors.white,
               color: Colors.lightGreen[200],
               padding: EdgeInsets.only(top: 15, bottom: 15),
-              onPressed: () => {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Dashboard()),
+                );
+              },
               child: Text(
                 "Log In",
               ),
@@ -118,7 +124,7 @@ class LoginPage extends StatelessWidget {
                 );
               },
               child: Text(
-                "Sign Me Up",
+                "Sign Up",
               ),
             ),
           ),

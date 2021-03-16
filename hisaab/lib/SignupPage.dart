@@ -1,30 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hisaab/Dashboard.dart';
 import 'package:hisaab/LoginPage.dart';
 
 class SignupPage extends StatelessWidget {
-  Future<bool> _onBackPressed(BuildContext context) {
-    return showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text("Are you sure?"),
-          content: Text("You are going to exit the application"),
-          actions: <Widget>[
-            FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop(false);
-              },
-              child: Text("NO"),
-            ),
-            FlatButton(
-              onPressed: () {
-                Navigator.of(context).pop(true);
-              },
-              child: Text("YES"),
-            ),
-          ],
-        );
-      },
+  _onBackPressed(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => LoginPage(),
+          settings: RouteSettings(name: '/screen2')),
     );
   }
 
@@ -110,7 +94,12 @@ class SignupPage extends StatelessWidget {
               textColor: Colors.white,
               color: Colors.lightBlue[200],
               padding: EdgeInsets.only(top: 15, bottom: 15),
-              onPressed: () => {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Dashboard()),
+                );
+              },
               child: Text(
                 "Sign Up",
               ),

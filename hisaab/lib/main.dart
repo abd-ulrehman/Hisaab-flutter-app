@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hisaab/Dashboard.dart';
 import 'package:hisaab/LoginPage.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      home: Dashboard(),
     );
   }
 }
